@@ -1,0 +1,102 @@
+DAX Implementation Guide
+
+
+1. Revenue Measures
+-- Basic revenue calculation
+Total Revenue = 
+CALCULATE(
+    SUM(Orders[TotalAmount]),
+    Orders[OrderStatus] = "Completed"
+)
+
+Logic:
+
+Sums all order amounts
+Filters to completed orders only
+Used in all revenue visuals
+
+
+
+2. Count Measures
+dax
+-- Count distinct orders
+Total Orders = COUNTA(Orders[OrderID])
+
+-- Count unique customers
+Total Customers = DISTINCTCOUNT(Orders[CustomerID])
+
+-- Count returns
+Total Returns = COUNTA(Returns[ReturnID])
+
+Logic:
+
+COUNTA counts non-blank cells
+DISTINCTCOUNT counts unique values
+Used for volume metrics
+
+
+
+3. Average/Rate Measures
+dax
+-- Calculate average per order
+Avg Order Value = 
+CALCULATE(
+    AVERAGE(Orders[TotalAmount]),
+    Orders[OrderStatus] = "Completed"
+)
+
+-- Calculate return percentage
+Return Rate % = 
+DIVIDE(
+    COUNTA(Returns[ReturnID]),
+    CALCULATE(COUNTA(Orders[OrderID]), Orders[OrderStatus] = "Completed")
+) * 100
+
+Logic:
+
+AVERAGE calculates mean values
+DIVIDE handles division with 0 protection
+Multiplied by 100 for percentage display
+
+
+
+4. Category Analysis Measures
+dax
+-- Revenue by category (works with category filter)
+Category Revenue = 
+CALCULATE(
+    SUM(Orders[TotalAmount]),
+    Orders[OrderStatus] = "Completed"
+)
+
+-- Products sold by category
+Category Products Sold = 
+SUMX(OrderDetails, OrderDetails[Quantity])
+
+Logic:
+
+CALCULATE respects category context
+SUMX iterates through rows
+Aggregates based on current filter context
+
+
+5. Growth Measures
+dax
+-- Month-over-Month comparison
+MoM Growth % = 
+DIVIDE(
+    [Total Revenue],
+    CALCULATE([Total Revenue], DATEADD(Orders[OrderDate], -1, MONTH))
+) * 100 - 100
+
+-- Year-over-Year comparison
+YoY Growth % = 
+DIVIDE(
+    [Total Revenue],
+    CALCULATE([Total Revenue], DATEADD(Orders[OrderDate], -1, YEAR))
+) * 100 - 100
+
+Logic:
+
+DATEADD shifts dates for comparison
+Subtracting 100 converts ratio to percentage change
