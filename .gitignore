@@ -1,0 +1,19 @@
+# Large files
+*.pbix
+*.xlsx
+*.csv
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.log
+
+# OS
+desktop.ini
