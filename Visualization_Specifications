@@ -1,0 +1,223 @@
+Visualization Specifications
+
+
+Page 1: Geographic Analysis
+
+
+Visual 1: World Map
+Type:           Filled Map (Shape Map)
+Location:       Customers[Country]
+Color Saturation: [Total Revenue]
+Tooltips:       
+  - Country name
+  - Total Revenue
+  - Order count
+  - Customer count
+Format:
+  - Title: "Revenue by Geographic Location"
+  - Color: Gold gradient (#FFB913 to #FF6B00)
+  - Data labels: ON
+
+  
+Visual 2: KPI Cards (4x)
+Card 1:
+  Measure: [Total Revenue]
+  Display: $10.21M
+  Format: Currency
+
+Card 2:
+  Measure: [Total Orders]
+  Display: 50K
+  Format: Number
+
+Card 3:
+  Measure: [Total Customers]
+  Display: 5K
+  Format: Number
+
+Card 4:
+  Measure: [Avg Order Value]
+  Display: $239.72
+  Format: Currency
+
+  
+Visual 3: Bar Chart - Top Countries
+Type:       Bar Chart (Horizontal)
+Y-Axis:     Customers[Country]
+X-Axis:     [Total Revenue]
+Format:
+  - Title: "Top 10 Countries by Revenue"
+  - Sort: Descending
+  - Data labels: ON (Show values)
+  - Colors: Gold theme
+  - Rows: Top 10
+
+
+
+  
+Page 2: Sales Analytics
+
+
+Visual 1: Column Chart - Monthly Revenue
+Type:       Column Chart
+X-Axis:     Orders[OrderDate] (by Month)
+Y-Axis:     [Total Revenue]
+Format:
+  - Title: "Monthly Revenue Trend"
+  - Trend line: Yes
+  - Data labels: Minimal
+  - Colors: Gold primary
+  
+Visual 2: Pie Chart - Order Status
+Type:       Pie Chart
+Values:     [Total Orders]
+Legend:     Orders[OrderStatus]
+Format:
+  - Title: "Orders by Status"
+  - Show percentages: Yes
+  - Data labels: Yes
+  - Explode slices: No
+
+
+  
+Page 3: Product & Quality
+
+Visual 1: Bar Chart - Revenue by Category
+Type:       Bar Chart
+Y-Axis:     Products[Category]
+X-Axis:     [Category Revenue]
+Format:
+  - Title: "Revenue by Product Category"
+  - Sort: Descending by revenue
+  - Data labels: ON (currency format)
+  - Colors: Gold gradient
+  - Rows: All 10 categories
+  
+Visual 2: Donut Chart - Return Reasons
+Type:       Donut Chart
+Values:     [Total Returns]
+Legend:     Returns[Reason]
+Format:
+  - Title: "Return Reasons Analysis"
+  - Show percentages: Yes
+  - Data labels: ON
+  - Colors: Multi-color palette
+Code Structure
+Folder Organization
+amazon-sales-dashboard/
+│
+├── 📊 Power BI Files
+│   ├── Amazon_Sales_Dashboard.pbix
+│   └── Amazon_Sales_Final.pbix
+│
+├── 📁 Data
+│   ├── Amazon_Sales_Data_2020_2026.xlsx
+│   ├── Products.csv
+│   ├── Customers.csv
+│   ├── Orders.csv
+│   ├── OrderDetails.csv
+│   └── Returns.csv
+│
+├── 📄 Documentation
+│   ├── README.md
+│   ├── ARCHITECTURE.md (this file)
+│   ├── DAX_FORMULAS.md
+│   ├── DATA_DICTIONARY.md
+│   └── DESIGN_GUIDE.md
+│
+├── 🎨 Design Assets
+│   ├── Amazon_Dark_Theme.json
+│   ├── Color_Palette.txt
+│   └── Logo_Placeholder.png
+│
+├── 📊 Exports
+│   ├── Dashboard_Screenshot.png
+│   ├── Dashboard_Export.pdf
+│   └── KPI_Summary.xlsx
+│
+├── 🔧 Configuration
+│   ├── Data_Connections.md
+│   ├── Refresh_Settings.md
+│   └── Security_Guidelines.md
+│
+└── 📝 Project Files
+    ├── LICENSE
+    ├── CONTRIBUTING.md
+    └── .gitignore
+
+    
+Performance Optimization
+Query Optimization
+dax
+-- ❌ Inefficient (iterates all rows)
+Slow Measure = 
+SUMX(Orders, Orders[TotalAmount] * Orders[Quantity])
+
+-- ✅ Efficient (uses aggregation)
+Fast Measure = 
+SUM(Orders[TotalAmount]) * 
+AVERAGE(Orders[Quantity])
+Memory Optimization
+Hide unused columns from model
+Use integer data types when possible
+Apply filters at source when available
+Archive old data periodically
+
+
+
+Calculation Optimization
+dax
+-- Use CALCULATE for context changes
+Optimized = 
+CALCULATE(
+    SUM(Orders[TotalAmount]),
+    Orders[OrderStatus] = "Completed"
+)
+
+-- Avoid FILTER when CALCULATE is available
+Unoptimized = 
+SUMX(
+    FILTER(Orders, Orders[OrderStatus] = "Completed"),
+    Orders[TotalAmount]
+)
+
+
+
+Testing & QA
+Data Validation
+
+✓ Validation Checks:
+  - No NULL values in key columns
+  - Date ranges: 2020-2026 valid
+  - Numeric ranges: prices > 0
+  - Relationships: No orphaned records
+  - Row counts: Expected 206K+
+
+  
+Measure Testing
+Test Cases:
+1. Total Revenue
+   Expected: $10,210,000
+   Actual: $10,210,000 ✓
+
+2. Total Orders
+   Expected: 50,000
+   Actual: 50,000 ✓
+
+3. Return Rate %
+   Expected: ~5%
+   Actual: 5.0% ✓
+
+   
+Visual Testing
+
+Test Scenarios:
+1. Filter by Country: USA
+   - All visuals update ✓
+   - Numbers recalculate ✓
+   - No errors displayed ✓
+
+2. Filter by Region: North
+   - Maps highlight correctly ✓
+   - Charts filter properly ✓
+   - Slicers synchronized ✓
