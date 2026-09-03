@@ -1,0 +1,157 @@
+*Architecture & Design Documentation*
+System Architecture
+High-Level Overview
+┌─────────────────────────────────────────────────────────────┐
+│                    DATA LAYER                               │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Excel Data Source                                    │  │
+│  │  - Orders (50K)                                       │  │
+│  │  - OrderDetails (150K)                                │  │
+│  │  - Products (328)                                     │  │
+│  │  - Customers (5K)                                     │  │
+│  │  - Returns (2.1K)                                     │  │
+│  └──────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│              TRANSFORMATION LAYER                            │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Power Query (Data Cleaning)                          │  │
+│  │  - Data type validation                               │  │
+│  │  - Null value handling                                │  │
+│  │  - Date formatting                                    │  │
+│  └──────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│              DATA MODEL LAYER (STAR SCHEMA)                  │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │  FACT TABLES          │  DIMENSION TABLES           │   │
+│  │  - Orders             │  - Customers                │   │
+│  │  - OrderDetails       │  - Products                 │   │
+│  │  - Returns            │  - Date Calendar (implied)  │   │
+│  └─────────────────────────────────────────────────────┘   │
+│  Relationships: 4 primary keys / 4 foreign keys             │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│              CALCULATION LAYER (DAX)                        │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Measures (12+)                                       │  │
+│  │  - Revenue, Orders, Customers, Returns               │  │
+│  │  - Growth Rates, Margins, Trends                      │  │
+│  │  - Customer Analytics, Category Analysis             │  │
+│  └──────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│            PRESENTATION LAYER (VISUALIZATIONS)              │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Page 1: Geographic Analysis                          │  │
+│  │  Page 2: Sales Analytics                              │  │
+│  │  Page 3: Product & Quality Analysis                   │  │
+│  │  ├─ 15+ Interactive Charts                            │  │
+│  │  ├─ 5+ KPI Cards                                      │  │
+│  │  └─ 3+ Slicers/Filters                                │  │
+│  └──────────────────────────────────────────────────────┘  │
+
+
+
+Data Model Design
+Entity-Relationship Diagram (ERD)
+
+
+┌────────────────────────────────────────────────────────────┐
+│                       CUSTOMERS                             │
+├────────────────────────────────────────────────────────────┤
+│ PK │ CustomerID (Text)                                     │
+│    │ CustomerName (Text)                                   │
+│    │ Email (Text)                                          │
+│    │ Country (Text) ─────────────────────────┐             │
+│    │ Region (Text) ──────────────────┐       │             │
+│    │ JoinDate (Date)                 │       │             │
+│    │ CustomerTier (Text)             │       │             │
+│    │ LifetimeSpend (Currency)        │       │             │
+└────────────────────────────────────────────────────────────┘
+                    ↑                         │
+                    │ CustomerID             │
+                    │                         │
+┌──────────────────────────────────────────────────────────┐
+│                      ORDERS                               │
+├──────────────────────────────────────────────────────────┤
+│ PK │ OrderID (Text)                                      │
+│    │ OrderDate (Date) ──────────┐                        │
+│    │ CustomerID (Text) ─────────┼────────────┘           │
+│ FK │ TotalAmount (Currency)     │                        │
+│    │ OrderStatus (Text)         │                        │
+│    │ ShippingDate (Date)        │                        │
+│    │ DeliveryDate (Date)        │                        │
+└──────────────────────────────────────────────────────────┘
+     ↑                                 │
+     │ OrderID                    OrderID
+     │                                 │
+     │         ┌──────────────────────┘
+     │         ↓
+┌─────────────────────────────────────────────────────────────┐
+│                    ORDERDETAILS                             │
+├─────────────────────────────────────────────────────────────┤
+│ PK │ OrderDetailID (Text)                                  │
+│ FK │ OrderID (Text) ────────────────────────────────────┐  │
+│ FK │ ProductID (Text) ──────────────────┐               │  │
+│    │ Quantity (Integer)                 │               │  │
+│    │ UnitPrice (Currency)               │               │  │
+│    │ Discount (Percent)                 │               │  │
+│    │ LineTotal (Currency)               │               │  │
+└─────────────────────────────────────────────────────────────┘
+                                      │ ProductID
+                                      │
+┌─────────────────────────────────────┴─────────────────────┐
+│                      PRODUCTS                              │
+├─────────────────────────────────────────────────────────┐  │
+│ PK │ ProductID (Text)                                  │  │
+│    │ ProductName (Text)                                │  │
+│    │ Category (Text)                                   │  │
+│    │ Subcategory (Text)                                │  │
+│    │ Price (Currency)                                  │  │
+│    │ Cost (Currency)                                   │  │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│                      RETURNS                                │
+├─────────────────────────────────────────────────────────────┤
+│ PK │ ReturnID (Text)                                       │
+│ FK │ OrderID (Text) ─────────────────────────────┐         │
+│ FK │ CustomerID (Text)                          │         │
+│    │ ReturnDate (Date)                          │         │
+│    │ Reason (Text)                              │         │
+│    │ RefundAmount (Currency)                    │         │
+│    │ RestockingFee (Currency)                   │         │
+└─────────────────────────────────────────────────────────────┘
+                                       ↑
+                                       │ OrderID
+                                       │
+                    ┌──────────────────┘
+                    (from ORDERS)
+
+
+
+Relationship Cardinality
+Orders (1) ═══════════════════════════════════════ (∞) OrderDetails
+           Primary Key: OrderID
+           Foreign Key: OrderID
+
+Orders (∞) ═══════════════════════════════════════ (1) Customers
+           Primary Key: CustomerID
+           Foreign Key: CustomerID
+
+OrderDetails (∞) ══════════════════════════════════ (1) Products
+                 Primary Key: ProductID
+                 Foreign Key: ProductID
+
+Orders (1) ═══════════════════════════════════════ (∞) Returns
+           Primary Key: OrderID
+           Foreign Key: OrderID
+
+
+
+└─────────────────────────────────────────────────────────────┘
