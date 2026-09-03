@@ -1,0 +1,329 @@
+ProductID,ProductName,Category,Subcategory,Price,Cost
+PROD00001,Product 1,Home & Kitchen,Premium,133.94,48.88
+PROD00003,Product 3,Sports,Standard,74.64,45.27
+PROD00004,Product 4,Home & Kitchen,Premium,318.42,100.88
+PROD00006,Product 6,Electronics,Premium,62.13,37.62
+PROD00007,Product 7,Home & Kitchen,Standard,109.24,11.82
+PROD00010,Product 10,Office Supplies,Bulk,43.54,17.64
+PROD00011,Product 11,Sports,Bulk,290.77,45.58
+PROD00012,Product 12,Automotive,Budget,95.01,17.47
+PROD00015,Product 15,Books,Standard,55.67,43.23
+PROD00017,Product 17,Home & Kitchen,Premium,89.05,23.43
+PROD00018,Product 18,Toys,Premium,173.82,20.56
+PROD00019,Product 19,Beauty,Budget,106.39,11.38
+PROD00021,Product 21,Electronics,Bulk,162.52,62.62
+PROD00022,Product 22,Office Supplies,Premium,82.06,42.91
+PROD00025,Product 25,Automotive,Budget,118.5,13.32
+PROD00026,Product 26,Automotive,Standard,116.66,40.12
+PROD00028,Product 28,Sports,Budget,205.37,115.01
+PROD00029,Product 29,Home & Kitchen,Standard,46,42.63
+PROD00031,Product 31,Books,Bulk,61.35,47.06
+PROD00032,Product 32,Beauty,Standard,37.15,20.97
+PROD00033,Product 33,Beauty,Budget,172.44,161.58
+PROD00035,Product 35,Home & Kitchen,Standard,120.22,32.59
+PROD00039,Product 39,Office Supplies,Standard,96.51,42.98
+PROD00040,Product 40,Beauty,Premium,96.87,11.13
+PROD00041,Product 41,Sports,Premium,75.51,72.65
+PROD00042,Product 42,Beauty,Bulk,293.63,36.07
+PROD00043,Product 43,Books,Premium,47.14,36.55
+PROD00044,Product 44,Sports,Budget,187.23,71.02
+PROD00047,Product 47,Fashion,Budget,51.33,42.01
+PROD00048,Product 48,Fashion,Standard,65.78,16.93
+PROD00049,Product 49,Office Supplies,Budget,114.08,67.28
+PROD00050,Product 50,Automotive,Bulk,90.39,45.26
+PROD00052,Product 52,Beauty,Standard,68.43,28.74
+PROD00053,Product 53,Fashion,Bulk,79.12,75.43
+PROD00054,Product 54,Home & Kitchen,Premium,407.06,62.78
+PROD00055,Product 55,Home & Kitchen,Standard,110.61,51.44
+PROD00058,Product 58,Toys,Bulk,77.18,69.49
+PROD00059,Product 59,Automotive,Bulk,87.55,21.44
+PROD00060,Product 60,Office Supplies,Budget,224.59,99.64
+PROD00061,Product 61,Office Supplies,Premium,169.5,26.38
+PROD00062,Product 62,Home & Kitchen,Budget,276.51,17.79
+PROD00064,Product 64,Books,Bulk,40.75,34.71
+PROD00065,Product 65,Fashion,Bulk,97.49,36.5
+PROD00069,Product 69,Books,Standard,48.11,42.2
+PROD00070,Product 70,Fashion,Budget,172.57,20.4
+PROD00073,Product 73,Pet Supplies,Premium,110.82,102.05
+PROD00074,Product 74,Home & Kitchen,Budget,33.46,18.98
+PROD00075,Product 75,Books,Standard,136.67,69.24
+PROD00076,Product 76,Electronics,Standard,109.99,72.04
+PROD00078,Product 78,Home & Kitchen,Bulk,113.8,30.83
+PROD00079,Product 79,Home & Kitchen,Standard,400.46,79.76
+PROD00082,Product 82,Books,Bulk,227.44,28.32
+PROD00083,Product 83,Sports,Standard,194.55,75.96
+PROD00085,Product 85,Beauty,Bulk,73.97,29.87
+PROD00086,Product 86,Office Supplies,Bulk,44.19,28.43
+PROD00087,Product 87,Home & Kitchen,Standard,84.63,71.73
+PROD00088,Product 88,Sports,Premium,112.32,105.82
+PROD00091,Product 91,Automotive,Standard,148.49,27.5
+PROD00094,Product 94,Home & Kitchen,Premium,131.45,51.51
+PROD00095,Product 95,Beauty,Premium,45.72,16.25
+PROD00097,Product 97,Books,Bulk,106.83,20.15
+PROD00098,Product 98,Sports,Standard,103.39,74.31
+PROD00100,Product 100,Sports,Bulk,94.31,21.88
+PROD00101,Product 101,Toys,Standard,119.85,85.51
+PROD00102,Product 102,Home & Kitchen,Premium,214.1,126.85
+PROD00103,Product 103,Toys,Budget,29.9,25.78
+PROD00104,Product 104,Toys,Bulk,135.91,82.35
+PROD00106,Product 106,Home & Kitchen,Premium,142.13,135.43
+PROD00107,Product 107,Toys,Budget,193.1,91.94
+PROD00109,Product 109,Sports,Standard,48.51,45.18
+PROD00110,Product 110,Office Supplies,Bulk,61.05,58.29
+PROD00111,Product 111,Fashion,Bulk,573.48,12.26
+PROD00112,Product 112,Fashion,Budget,155.87,15.03
+PROD00114,Product 114,Home & Kitchen,Bulk,94.77,23.05
+PROD00117,Product 117,Home & Kitchen,Standard,93.36,32.42
+PROD00118,Product 118,Fashion,Bulk,500.27,90.66
+PROD00122,Product 122,Toys,Premium,134.83,109.14
+PROD00124,Product 124,Pet Supplies,Budget,61.56,32.37
+PROD00125,Product 125,Toys,Bulk,369.58,75.49
+PROD00127,Product 127,Books,Standard,491.63,124.71
+PROD00129,Product 129,Beauty,Premium,248.02,31
+PROD00130,Product 130,Electronics,Bulk,128.39,101.46
+PROD00133,Product 133,Fashion,Premium,73.55,20.12
+PROD00134,Product 134,Automotive,Premium,332.26,17.39
+PROD00135,Product 135,Sports,Bulk,63.31,60.62
+PROD00136,Product 136,Home & Kitchen,Standard,285.15,17.31
+PROD00137,Product 137,Automotive,Premium,228.27,55.05
+PROD00139,Product 139,Toys,Budget,105.56,33.78
+PROD00140,Product 140,Books,Standard,95.19,40.11
+PROD00141,Product 141,Beauty,Standard,98.57,92.73
+PROD00142,Product 142,Books,Bulk,320.16,20.28
+PROD00143,Product 143,Fashion,Budget,495.93,11.45
+PROD00145,Product 145,Home & Kitchen,Premium,112.71,33.18
+PROD00146,Product 146,Pet Supplies,Premium,76.21,36.8
+PROD00148,Product 148,Office Supplies,Budget,119.77,31.36
+PROD00149,Product 149,Fashion,Budget,184.87,69.81
+PROD00150,Product 150,Home & Kitchen,Standard,172.48,90.35
+PROD00151,Product 151,Beauty,Budget,46.38,34.88
+PROD00152,Product 152,Fashion,Bulk,163.67,88.97
+PROD00153,Product 153,Office Supplies,Budget,88.52,59.97
+PROD00154,Product 154,Automotive,Premium,250.17,34.01
+PROD00155,Product 155,Office Supplies,Budget,139.45,46.44
+PROD00157,Product 157,Books,Premium,174.22,104.67
+PROD00158,Product 158,Home & Kitchen,Standard,255.8,55.52
+PROD00159,Product 159,Books,Budget,155.33,42.6
+PROD00160,Product 160,Automotive,Standard,116.67,49.2
+PROD00161,Product 161,Beauty,Standard,97.28,87.89
+PROD00163,Product 163,Books,Premium,40.25,20.67
+PROD00164,Product 164,Home & Kitchen,Bulk,227.35,102.86
+PROD00165,Product 165,Books,Premium,148.31,90.26
+PROD00166,Product 166,Electronics,Budget,89.14,26.63
+PROD00167,Product 167,Fashion,Budget,95.65,31.76
+PROD00168,Product 168,Fashion,Bulk,196.39,48.54
+PROD00169,Product 169,Office Supplies,Bulk,46.51,42.22
+PROD00170,Product 170,Office Supplies,Premium,125.25,34.78
+PROD00172,Product 172,Fashion,Premium,109.51,36.4
+PROD00174,Product 174,Toys,Standard,28.26,17.71
+PROD00175,Product 175,Electronics,Budget,50.67,46.03
+PROD00177,Product 177,Beauty,Standard,178.77,48.04
+PROD00178,Product 178,Sports,Premium,88.66,24.48
+PROD00179,Product 179,Beauty,Bulk,88.69,43.34
+PROD00180,Product 180,Automotive,Standard,116.53,28.17
+PROD00182,Product 182,Fashion,Bulk,82.52,75.29
+PROD00183,Product 183,Electronics,Standard,156.35,39.61
+PROD00184,Product 184,Beauty,Bulk,107.69,55.15
+PROD00185,Product 185,Sports,Budget,97.33,29.42
+PROD00186,Product 186,Fashion,Premium,91.8,81.32
+PROD00187,Product 187,Toys,Premium,287.41,117.62
+PROD00188,Product 188,Pet Supplies,Standard,503.98,29.55
+PROD00189,Product 189,Sports,Bulk,180.88,63.22
+PROD00190,Product 190,Beauty,Budget,518.97,28.6
+PROD00191,Product 191,Sports,Standard,45.98,33.8
+PROD00195,Product 195,Books,Budget,192.55,34.41
+PROD00198,Product 198,Electronics,Premium,231.26,37.51
+PROD00202,Product 202,Automotive,Bulk,90.4,56.69
+PROD00205,Product 205,Toys,Standard,99.11,82.4
+PROD00206,Product 206,Books,Premium,159.06,22.2
+PROD00208,Product 208,Office Supplies,Standard,117.43,30
+PROD00209,Product 209,Beauty,Bulk,311.35,59.89
+PROD00210,Product 210,Home & Kitchen,Budget,231.24,57.63
+PROD00211,Product 211,Automotive,Budget,468.06,222.35
+PROD00215,Product 215,Toys,Budget,209.92,13.37
+PROD00216,Product 216,Office Supplies,Standard,34.93,10.68
+PROD00218,Product 218,Toys,Standard,299.43,57.93
+PROD00219,Product 219,Automotive,Budget,331.26,18.1
+PROD00221,Product 221,Books,Budget,122.39,53.19
+PROD00224,Product 224,Pet Supplies,Bulk,120.7,25.74
+PROD00225,Product 225,Pet Supplies,Standard,59.67,23.4
+PROD00228,Product 228,Books,Budget,58.9,28.95
+PROD00229,Product 229,Home & Kitchen,Standard,82.63,23.85
+PROD00230,Product 230,Books,Standard,57.81,20.94
+PROD00231,Product 231,Sports,Standard,433.45,56.16
+PROD00233,Product 233,Sports,Bulk,82.28,45.75
+PROD00234,Product 234,Automotive,Premium,147.13,100.08
+PROD00235,Product 235,Pet Supplies,Bulk,58.89,34.44
+PROD00236,Product 236,Automotive,Standard,72.24,8.66
+PROD00238,Product 238,Toys,Standard,335.62,44.74
+PROD00239,Product 239,Fashion,Premium,142.77,70.04
+PROD00240,Product 240,Home & Kitchen,Bulk,1056.91,133.71
+PROD00241,Product 241,Sports,Standard,81.26,25.42
+PROD00243,Product 243,Electronics,Standard,49.15,17.5
+PROD00244,Product 244,Home & Kitchen,Bulk,53.66,22.98
+PROD00245,Product 245,Fashion,Bulk,347.13,110.53
+PROD00247,Product 247,Pet Supplies,Bulk,95.76,27.41
+PROD00248,Product 248,Office Supplies,Bulk,304.45,84.03
+PROD00250,Product 250,Pet Supplies,Budget,44.68,18.06
+PROD00253,Product 253,Sports,Budget,53.49,36.98
+PROD00254,Product 254,Pet Supplies,Premium,56.04,27.35
+PROD00255,Product 255,Books,Standard,93.58,28.09
+PROD00256,Product 256,Books,Budget,111.76,52.45
+PROD00257,Product 257,Beauty,Premium,74.35,26.42
+PROD00259,Product 259,Sports,Bulk,134.39,24.98
+PROD00263,Product 263,Office Supplies,Bulk,48.88,12.89
+PROD00265,Product 265,Sports,Bulk,110.81,26.48
+PROD00266,Product 266,Toys,Premium,150.04,14.45
+PROD00267,Product 267,Automotive,Bulk,85.38,20.72
+PROD00269,Product 269,Beauty,Budget,45.23,40.14
+PROD00270,Product 270,Toys,Bulk,201.35,34.41
+PROD00271,Product 271,Office Supplies,Standard,175.66,22.11
+PROD00274,Product 274,Pet Supplies,Premium,142.83,46.41
+PROD00275,Product 275,Toys,Budget,121.14,33.68
+PROD00276,Product 276,Toys,Standard,96.47,48.2
+PROD00277,Product 277,Pet Supplies,Standard,229.12,66.92
+PROD00278,Product 278,Automotive,Premium,117.93,39.27
+PROD00279,Product 279,Toys,Premium,60.94,38.63
+PROD00280,Product 280,Home & Kitchen,Bulk,123.42,38.99
+PROD00282,Product 282,Fashion,Premium,180.71,42.06
+PROD00283,Product 283,Books,Bulk,235.33,39.39
+PROD00287,Product 287,Books,Bulk,116.93,45.82
+PROD00288,Product 288,Books,Premium,174.78,9.31
+PROD00289,Product 289,Pet Supplies,Premium,108.69,101.16
+PROD00291,Product 291,Beauty,Standard,118.01,39.16
+PROD00293,Product 293,Electronics,Standard,104.11,66.59
+PROD00294,Product 294,Sports,Premium,62.33,27.66
+PROD00295,Product 295,Automotive,Standard,174.91,27.53
+PROD00296,Product 296,Sports,Standard,95.32,37.26
+PROD00297,Product 297,Pet Supplies,Premium,132.05,71.3
+PROD00298,Product 298,Automotive,Standard,206.44,36.31
+PROD00299,Product 299,Pet Supplies,Budget,72.54,24.95
+PROD00301,Product 301,Automotive,Premium,164.94,26.11
+PROD00302,Product 302,Fashion,Budget,180.49,161.5
+PROD00304,Product 304,Books,Bulk,48.47,20.17
+PROD00306,Product 306,Home & Kitchen,Standard,151.94,52.22
+PROD00307,Product 307,Home & Kitchen,Budget,112.61,22.19
+PROD00308,Product 308,Automotive,Premium,636.89,60.54
+PROD00309,Product 309,Automotive,Premium,98.25,97.57
+PROD00310,Product 310,Beauty,Bulk,132.26,65.31
+PROD00312,Product 312,Office Supplies,Budget,405.7,160.19
+PROD00313,Product 313,Electronics,Bulk,322,36.27
+PROD00317,Product 317,Toys,Standard,79.33,38.8
+PROD00318,Product 318,Office Supplies,Budget,40.06,14.53
+PROD00319,Product 319,Automotive,Bulk,173.91,57.9
+PROD00320,Product 320,Pet Supplies,Bulk,32.07,19.37
+PROD00322,Product 322,Beauty,Standard,73.14,16.4
+PROD00323,Product 323,Home & Kitchen,Budget,73.95,43.9
+PROD00326,Product 326,Beauty,Premium,395.11,134.46
+PROD00327,Product 327,Pet Supplies,Budget,72.59,22.53
+PROD00328,Product 328,Fashion,Bulk,705.35,57.25
+PROD00329,Product 329,Sports,Budget,91.03,53.55
+PROD00330,Product 330,Books,Budget,105.47,48.64
+PROD00331,Product 331,Books,Budget,56.89,35.25
+PROD00332,Product 332,Office Supplies,Premium,87.69,35.35
+PROD00336,Product 336,Office Supplies,Standard,243.93,10.39
+PROD00337,Product 337,Pet Supplies,Bulk,68.43,40.56
+PROD00340,Product 340,Sports,Bulk,190.29,150.99
+PROD00341,Product 341,Sports,Budget,160.35,22.13
+PROD00344,Product 344,Toys,Budget,74.27,40.45
+PROD00345,Product 345,Beauty,Bulk,158.98,77.9
+PROD00348,Product 348,Home & Kitchen,Standard,144.67,42.62
+PROD00349,Product 349,Beauty,Premium,116.85,20.07
+PROD00350,Product 350,Office Supplies,Standard,188.52,47.09
+PROD00352,Product 352,Pet Supplies,Budget,51.24,17.69
+PROD00356,Product 356,Beauty,Standard,106.57,50.53
+PROD00359,Product 359,Books,Premium,98.63,61.57
+PROD00360,Product 360,Electronics,Budget,67.3,52.17
+PROD00361,Product 361,Fashion,Bulk,115.15,13.9
+PROD00363,Product 363,Automotive,Budget,103.2,47.13
+PROD00364,Product 364,Pet Supplies,Bulk,91.35,72.1
+PROD00365,Product 365,Pet Supplies,Budget,58.45,29.29
+PROD00366,Product 366,Fashion,Premium,105.29,24.96
+PROD00367,Product 367,Books,Bulk,124.79,13.98
+PROD00368,Product 368,Home & Kitchen,Premium,205.06,79.68
+PROD00370,Product 370,Home & Kitchen,Premium,341.17,122.92
+PROD00371,Product 371,Fashion,Standard,20.64,19.62
+PROD00373,Product 373,Home & Kitchen,Standard,136.2,30.55
+PROD00374,Product 374,Home & Kitchen,Bulk,104.52,29.84
+PROD00375,Product 375,Automotive,Standard,55.19,17.72
+PROD00376,Product 376,Office Supplies,Bulk,43.01,18.52
+PROD00379,Product 379,Books,Premium,133.57,63.3
+PROD00382,Product 382,Books,Premium,697.89,50.56
+PROD00383,Product 383,Fashion,Standard,225.75,31.11
+PROD00386,Product 386,Toys,Bulk,158.57,34.81
+PROD00387,Product 387,Automotive,Bulk,149.3,118.87
+PROD00388,Product 388,Books,Premium,148.03,15.55
+PROD00389,Product 389,Sports,Budget,50.31,44.79
+PROD00391,Product 391,Home & Kitchen,Standard,103.77,18.76
+PROD00392,Product 392,Books,Standard,122.02,88.99
+PROD00393,Product 393,Toys,Premium,140.87,129.62
+PROD00394,Product 394,Office Supplies,Standard,175.41,78.83
+PROD00395,Product 395,Fashion,Budget,85.1,14.46
+PROD00396,Product 396,Fashion,Premium,126.94,64.47
+PROD00397,Product 397,Electronics,Standard,111.86,19.66
+PROD00400,Product 400,Pet Supplies,Budget,92.08,55.91
+PROD00401,Product 401,Toys,Budget,190.69,36.13
+PROD00402,Product 402,Office Supplies,Bulk,97.21,37.72
+PROD00403,Product 403,Pet Supplies,Premium,63.59,42.63
+PROD00404,Product 404,Automotive,Premium,107.52,37.23
+PROD00405,Product 405,Toys,Budget,245.82,26.69
+PROD00406,Product 406,Automotive,Budget,77.52,38.41
+PROD00407,Product 407,Electronics,Premium,286.46,63.9
+PROD00408,Product 408,Sports,Premium,205.51,16.64
+PROD00409,Product 409,Books,Premium,111.46,111.24
+PROD00412,Product 412,Books,Standard,566.3,40.84
+PROD00414,Product 414,Pet Supplies,Premium,318.51,35.94
+PROD00415,Product 415,Pet Supplies,Budget,64.32,43.58
+PROD00416,Product 416,Toys,Budget,30.71,26.18
+PROD00417,Product 417,Beauty,Premium,40.31,29.54
+PROD00418,Product 418,Fashion,Budget,87.55,65.85
+PROD00419,Product 419,Toys,Bulk,311.19,24.56
+PROD00420,Product 420,Books,Bulk,197.84,46.01
+PROD00423,Product 423,Beauty,Budget,102.84,80.96
+PROD00425,Product 425,Toys,Premium,54.04,35.7
+PROD00426,Product 426,Office Supplies,Bulk,54.68,35.01
+PROD00428,Product 428,Sports,Budget,280.45,34.58
+PROD00431,Product 431,Sports,Budget,105.88,16.24
+PROD00432,Product 432,Office Supplies,Standard,310.44,229.68
+PROD00433,Product 433,Books,Bulk,55.13,40.04
+PROD00434,Product 434,Pet Supplies,Premium,113.15,71.35
+PROD00436,Product 436,Fashion,Budget,78.14,28.83
+PROD00441,Product 441,Home & Kitchen,Standard,679.63,35.71
+PROD00444,Product 444,Toys,Bulk,143.62,40.96
+PROD00445,Product 445,Pet Supplies,Standard,144.39,132.55
+PROD00446,Product 446,Pet Supplies,Standard,173.54,81.93
+PROD00447,Product 447,Toys,Standard,211.31,139.13
+PROD00448,Product 448,Automotive,Standard,271.98,91.74
+PROD00449,Product 449,Home & Kitchen,Budget,78.75,61.4
+PROD00450,Product 450,Toys,Budget,236.32,28.4
+PROD00451,Product 451,Office Supplies,Budget,120.9,39.86
+PROD00453,Product 453,Books,Bulk,104.89,56.66
+PROD00456,Product 456,Beauty,Budget,70.37,65.06
+PROD00458,Product 458,Pet Supplies,Budget,83.41,68.25
+PROD00459,Product 459,Sports,Standard,146.4,63.39
+PROD00461,Product 461,Sports,Bulk,212.49,24.02
+PROD00462,Product 462,Electronics,Budget,100.12,31.18
+PROD00463,Product 463,Pet Supplies,Bulk,234.17,16.14
+PROD00465,Product 465,Pet Supplies,Premium,314.95,51.8
+PROD00467,Product 467,Home & Kitchen,Bulk,28.26,9.4
+PROD00468,Product 468,Home & Kitchen,Bulk,128,36.54
+PROD00470,Product 470,Toys,Standard,109.4,34.77
+PROD00472,Product 472,Books,Budget,151.44,50.43
+PROD00473,Product 473,Automotive,Bulk,394.38,23.19
+PROD00475,Product 475,Office Supplies,Bulk,86.79,66.33
+PROD00476,Product 476,Beauty,Bulk,74.22,72.36
+PROD00479,Product 479,Sports,Budget,118.41,78.68
+PROD00480,Product 480,Sports,Premium,142,78.11
+PROD00482,Product 482,Home & Kitchen,Bulk,105.34,96.27
+PROD00485,Product 485,Beauty,Premium,87.17,17.38
+PROD00486,Product 486,Books,Budget,99.73,31.66
+PROD00487,Product 487,Beauty,Bulk,176.36,32.39
+PROD00488,Product 488,Fashion,Standard,62.99,12.04
+PROD00489,Product 489,Office Supplies,Bulk,62.69,7.85
+PROD00491,Product 491,Fashion,Standard,168.79,76.74
+PROD00493,Product 493,Automotive,Standard,89.76,21.61
+PROD00494,Product 494,Pet Supplies,Standard,299.68,110.16
+PROD00495,Product 495,Sports,Bulk,75.43,55.79
+PROD00496,Product 496,Books,Bulk,106.35,10.66
+PROD00497,Product 497,Books,Premium,73.87,31.64
+PROD00499,Product 499,Office Supplies,Standard,379.23,91.17
