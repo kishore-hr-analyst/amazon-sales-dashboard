@@ -266,7 +266,7 @@ Text:    #FFFFFF (White)
 
 1. **Download Files**
 ```bash
-git clone https://github.com/yourusername/amazon-sales-dashboard.git
+git clone [amazon bi.pbix](https://github.com/kishore-hr-analyst/amazon-sales-dashboard/blob/main/amazon%20bi.pbix)
 cd amazon-sales-dashboard
 ```
 
